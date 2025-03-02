@@ -1,11 +1,9 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
 
-export default function Home() {
+export default function Docs() {
     return (
         <main className="w-full min-h-screen flex flex-col">
             <Navbar/>
-            <Hero/>
         </main>
     );
 }
