@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function LandingPageSectionImageLeft({id, src, alt}: LandingPageSectionProps) {
+export default function LandingPageSectionImageLeft({id, src, alt, title, description}: LandingPageSectionProps) {
     return (
         <section
             key={id}
@@ -25,11 +25,10 @@ export default function LandingPageSectionImageLeft({id, src, alt}: LandingPageS
                 className="md:w-[30%] w-full text-center md:text-left px-4 sm:px-8 flex flex-col justify-center h-auto md:h-screen"
             >
                 <h2 className="text-xl sm:text-2xl md:text-5xl font-bold text-gray-900">
-                    The Open Standard for Instant, Low-Cost C2B and P2P Payments
+                    {title}
                 </h2>
                 <p className="mt-1 sm:mt-2 text-xs sm:text-sm md:text-lg text-gray-600">
-                    A global payment identifier registry and open standard that enables instant,
-                    low-cost payments using the best available payment rails.
+                    {description}
                 </p>
             </div>
         </section>
