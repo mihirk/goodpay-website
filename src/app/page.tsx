@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import LandingPageSectionImageLeft from "@/components/LandingPageSectionImageLeft";
+import Footer from "@/components/Footer";
 
 const sections = [
     {
@@ -56,6 +57,7 @@ export default function Home() {
                 />
 
             ))}
+            <Footer/>
         </main>
     );
 }

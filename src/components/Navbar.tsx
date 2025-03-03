@@ -11,9 +11,11 @@ export default function Navbar() {
 
                 {/* Navigation Links */}
                 <div className="flex space-x-6 text-lg">
+                    <Link href="/" className="hover:underline">home</Link>
                     <Link href="/docs" className="hover:underline">docs</Link>
                     <Link href="/api" className="hover:underline">api</Link>
                     <Link href="/about" className="hover:underline">how it works</Link>
+                    <Link href="mailto:contact@goodpay.dev" className="hover:underline">contact</Link>
                 </div>
             </div>
         </nav>
