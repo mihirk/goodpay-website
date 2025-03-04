@@ -1,5 +1,13 @@
 import Image from "next/image";
 
+interface LandingPageSectionProps {
+    id: number;
+    src: string;
+    alt: string;
+    title: string;
+    description: string;
+}
+
 export default function LandingPageSectionImageLeft({id, src, alt, title, description}: LandingPageSectionProps) {
     return (
         <section
