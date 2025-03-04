@@ -1,4 +1,4 @@
-name: Sync to Personal GitHub Website
+name: Mirror to Personal Repository
 
 on:
   push:
@@ -6,28 +6,31 @@ on:
       - main
 
 jobs:
-  sync:
+  mirror:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Check if curl works
-        run: |
-          curl -H "Authorization: Bearer ${{ env.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/mihirk/goodpay-website
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
-      - name: Remove GitHub Actions Workflow Before Pushing
+      - name: Configure Git
         run: |
-          git config --global user.email "mihir.khatwani@gmail.com"
           git config --global user.name "mihirk"
-          
-          git remote add personal https://${{ env.GITHUB_TOKEN }}@github.com/mihirk/goodpay-website.git
+          git config --global user.email "mihir.khatwani@gmail.com"
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-          git checkout -b temp-sync  
-          rm -rf .github/workflows/sync-to-personal.yaml  # Remove GitHub Actions before syncing
-          git commit -am "Remove GitHub Actions before syncing"
+      - name: Remove workflow file
+        run: |
+          rm .github/workflows/sync-to-personal.yaml
+          git add .github/workflows/sync-to-personal.yaml
 
-          GIT_TRACE=1 GIT_CURL_VERBOSE=1 git push --force personal temp-sync
-
-    env:
-      GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - name: Mirror to personal repository
+        run: |
+          git remote add personal "git@github.com:mihirk/goodpay-website.git"
+          git checkou
+          git push -f personal "${{ github.ref }}"
