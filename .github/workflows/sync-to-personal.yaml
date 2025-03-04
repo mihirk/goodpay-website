@@ -27,7 +27,7 @@ jobs:
           rm -rf .github/workflows/sync-to-personal.yaml  # Remove GitHub Actions before syncing
           git commit -am "Remove GitHub Actions before syncing"
 
-          git push --force personal temp-sync:main
+          GIT_TRACE=1 GIT_TRACE_PACKET=1 GIT_TRACE_CURL=1 git push --force personal temp-sync
 
     env:
       GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
