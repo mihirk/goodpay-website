@@ -12,12 +12,16 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Check if curl works
+        run: |
+          curl -H "Authorization: Bearer ${{ env.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/mihirk/goodpay-website
+
       - name: Remove GitHub Actions Workflow Before Pushing
         run: |
           git config --global user.email "mihir.khatwani@gmail.com"
           git config --global user.name "mihirk"
           
-          git remote add personal https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/mihirk/goodpay-website.git
+          git remote add personal https://${{ env.GITHUB_TOKEN }}@github.com/mihirk/goodpay-website.git
 
           git checkout -b temp-sync  
           rm -rf .github/workflows/sync-to-personal.yaml  # Remove GitHub Actions before syncing
