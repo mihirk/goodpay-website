@@ -32,5 +32,4 @@ jobs:
       - name: Mirror to personal repository
         run: |
           git remote add personal "git@github.com:mihirk/goodpay-website.git"
-          git checkou
           git push -f personal "${{ github.ref }}"
