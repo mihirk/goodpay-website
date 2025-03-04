@@ -17,7 +17,7 @@ jobs:
           git config --global user.email "mihir.khatwani@gmail.com"
           git config --global user.name "mihirk"
           
-          git remote add personal https://mihirk:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/mihirk/goodpay-website.git
+          git remote add personal https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/mihirk/goodpay-website.git
 
           git checkout -b temp-sync  
           rm -rf .github/workflows/sync-to-personal.yaml  # Remove GitHub Actions before syncing
