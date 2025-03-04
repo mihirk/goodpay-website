@@ -28,6 +28,8 @@ jobs:
         run: |
           rm .github/workflows/sync-to-personal.yaml
           git add .github/workflows/sync-to-personal.yaml
+          git commit -m "Remove mirror workflow file"
+
 
       - name: Mirror to personal repository
         run: |
