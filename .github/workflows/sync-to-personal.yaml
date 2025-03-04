@@ -1,4 +1,4 @@
-name: Sync to Personal GitHub
+name: Sync to Personal GitHub Website
 
 on:
   push:
