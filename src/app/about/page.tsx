@@ -1,11 +1,7 @@
-import Navbar from "@/components/Navbar";
-import ComingSoon from "@/components/ComingSoon";
-
-export default function Docs() {
-    return (
-        <main className="w-full min-h-screen flex flex-col">
-            <Navbar/>
-            <ComingSoon/>
-        </main>
-    );
+export default function About() {
+  return (
+    <div className="container mx-auto">
+      <h1 className="text-4xl font-bold">About</h1>
+    </div>
+  );
 }
