@@ -91,10 +91,9 @@ const body = encodeURIComponent(emailContent.replace(/\n/g, "\r\n"));
 const cc = ccEmails.join(",");
 const toEmail = "contactus@psr.org.uk";
 const bcc = bccEmails.join(",");
-const testingToEmail = "init-campaign-1@getgoodpay.com";
-const testingCcEmail = [testingToEmail, "mihir@getgoodpay.com"].join(",");
+// const testingToEmail = "init-campaign-1@getgoodpay.com";
+// const testingCcEmail = [testingToEmail].join(",");
 
-export const testingMailToLink = `mailto:${testingToEmail}?cc=${testingCcEmail}&bcc=${testingCcEmail}&subject=${subject}&body=${body}`;
+// export const testingMailToLink = `mailto:${testingToEmail}?cc=${testingCcEmail}&bcc=${testingCcEmail}&subject=${subject}&body=${body}`;
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const mailtoLink = `mailto:${toEmail}?cc=${cc}&bcc=${bcc}&subject=${subject}&body=${body}`;
+export const mailtoLink = `mailto:${toEmail}?cc=${cc}&bcc=${bcc}&subject=${subject}&body=${body}`;

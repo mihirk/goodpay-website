@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {testingMailToLink} from './email';
+import {mailtoLink} from './email';
 
 export default function Campaign() {
     return (
@@ -38,7 +38,7 @@ export default function Campaign() {
             </div>
 
             <a
-                href={testingMailToLink}
+                href={mailtoLink}
                 className="flex flex-col items-center justify-center px-8 py-4 bg-red-500 hover:bg-red-600 rounded-xl shadow-md hover:shadow-lg transition duration-300"
             >
               <span className="text-lg font-semibold text-white">
