@@ -1,6 +1,5 @@
-"use client";
 import Image from "next/image";
-import {sendEmail} from "@/app/campaign/1/email";
+import {testingMailToLink} from './email';
 
 export default function Campaign() {
     return (
@@ -38,16 +37,17 @@ export default function Campaign() {
                 </ul>
             </div>
 
-            <button
-                onClick={sendEmail}
-                className="flex flex-col items-center justify-center px-8 py-4 bg-red-500 hover:bg-red-600 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                <span className="text-lg font-semibold text-white">
-                    Demand Better from Your Bank
-                </span>
-                <span className="text-sm text-red-100">
-                    STOP the 3% Big Corporate Tax & Support Local Businesses
-                </span>
-            </button>
+            <a
+                href={testingMailToLink}
+                className="flex flex-col items-center justify-center px-8 py-4 bg-red-500 hover:bg-red-600 rounded-xl shadow-md hover:shadow-lg transition duration-300"
+            >
+              <span className="text-lg font-semibold text-white">
+                Demand Better from Your Bank
+              </span>
+                <span className="text-sm text-red-100 text-center">
+                STOP the 3% Big Corporate Tax & Support Local Businesses
+              </span>
+            </a>
         </main>
     );
 }

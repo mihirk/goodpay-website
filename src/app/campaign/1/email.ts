@@ -64,7 +64,7 @@ const ccEmails = [
 
 const subject = encodeURIComponent("Urgent Complaint: Bank Inaction on Local Payment Rails Is Harming Consumers and Merchants");
 
-const body = encodeURIComponent(`Dear Complaints Department,
+const emailContent = `Dear Complaints Department,
 
 I am writing to raise a serious concern about your continued reliance on card payment networks such as Visa and Mastercard, and your failure to offer consumers and merchants a modern, fair alternative based on the domestic instant payment infrastructure.
 
@@ -83,18 +83,18 @@ This is not just a business issue—it’s a public one.
 I expect a formal response detailing your institution’s plans to support or build payment experiences that leverage domestic rails instead of card networks, and your timeline for doing so.
 
 Sincerely,
-Concerned Individual`);
+Concerned Individual`;
+
+
+const body = encodeURIComponent(emailContent.replace(/\n/g, "\r\n"));
 
 const cc = ccEmails.join(",");
 const toEmail = "contactus@psr.org.uk";
 const bcc = bccEmails.join(",");
 const testingToEmail = "init-campaign-1@getgoodpay.com";
-const testingCcEmail = [testingToEmail, "mihir@getgoodpay.com",].join(",");
+const testingCcEmail = [testingToEmail, "mihir@getgoodpay.com"].join(",");
 
-const testingMailToLink = `mailto:${testingToEmail}?cc=${testingCcEmail}&bcc=${testingCcEmail}&subject=${subject}&body=${body}`;
+export const testingMailToLink = `mailto:${testingToEmail}?cc=${testingCcEmail}&bcc=${testingCcEmail}&subject=${subject}&body=${body}`;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const mailtoLink = `mailto:${toEmail}?cc=${cc}&bcc=${bcc}&subject=${subject}&body=${body}`;
-export const sendEmail = () => {
-    window.location.href = testingMailToLink;
-}
