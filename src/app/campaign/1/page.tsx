@@ -3,7 +3,7 @@ import {testingMailToLink} from './email';
 
 export default function Campaign() {
     return (
-        <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-50">
+        <main className="flex flex-col items-center justify-start md:justify-center min-h-screen p-4 pt-6 bg-gray-50">
             <h1 className="text-3xl font-bold text-center mb-6">
                 {"Did You Know You're Paying a 3% "}
                 <span className="text-red-600">TAX</span> to Visa & Mastercard Every Time You Tap To Pay?
