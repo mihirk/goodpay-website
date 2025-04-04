@@ -93,7 +93,7 @@ const testingCcEmail = [testingToEmail, "mihir@getgoodpay.com",].join(",");
 
 const testingMailToLink = `mailto:${testingToEmail}?cc=${testingCcEmail}&bcc=${testingCcEmail}&subject=${subject}&body=${body}`;
 
-// tslint:disable-next-line
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const mailtoLink = `mailto:${toEmail}?cc=${cc}&bcc=${bcc}&subject=${subject}&body=${body}`;
 export const sendEmail = () => {
     window.location.href = testingMailToLink;
