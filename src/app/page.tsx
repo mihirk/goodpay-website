@@ -4,7 +4,6 @@ import PropositionSection from "@/components/landing/proposition-section";
 import P2PSection from "@/components/landing/p2p-section";
 import C2BSection from "@/components/landing/c2b-section";
 import APISection from "@/components/landing/api-section";
-import PricingSection from "@/components/landing/pricing-section";
 import TeamSection from "@/components/landing/team-section";
 import ConnectingSection from "@/components/landing/connecting-section";
 import JoinSection from "@/components/landing/join-section";
