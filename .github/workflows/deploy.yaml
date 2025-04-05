@@ -1,0 +1,51 @@
+name: Build and Deploy to Lightsail
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js (latest LTS)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'pnpm'
+
+      - name: Enable Corepack + Install dependencies
+        run: |
+          corepack enable
+          pnpm install
+
+      - name: Build project
+        run: pnpm build
+
+      - name: Copy to web.getgoodpay.com via SSH
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: web.getgoodpay.com
+          username: ec2-user
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          source: ".next,public,package.json,ecosystem.config.js,next.config.js"
+          target: "/home/ec2-user/website"
+
+      - name: Restart with PM2 using ecosystem.config.js
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: web.getgoodpay.com
+          username: ec2-user
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd /home/ec2-user/website
+            pnpm install --prod
+            pm2 start ecosystem.config.js
+            pm2 save
