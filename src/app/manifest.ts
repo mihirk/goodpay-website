@@ -2,42 +2,28 @@ import { routes } from "@/lib/routes";
 
 export default function manifest() {
   return {
-    name: "Florian's Playground",
-    short_name: "Florian's Playground",
+    name: "GoodPay",
+    short_name: "GoodPay",
     start_url: routes.root,
     id: routes.root,
     display: "standalone",
     orientation: "portrait",
-    background_color: "#0a0a0a",
-    description: "I'm a creative hobbyist who enjoys learning and building products.",
-    theme_color: "#0a0a0a",
+    background_color: "#ffffff",
+    description: "GoodPay is Europe's public infrastructure for instant payments.",
+    theme_color: "#ffffff",
     category: [
-      "portfolio",
-      "creative",
-      "developer",
-      "designer",
-      "aws",
-      "nextjs",
-      "tailwind",
-      "typescript",
-      "javascript",
-      "full-stack",
-      "frontend",
-      "backend",
-      "full-stack",
-      "web apps",
-      "web development",
-      "web design",
-      "web programming",
-      "product manager",
-      "product management",
-      "product lead",
-      "product leadership",
-      "product design",
-      "product development",
+      "instant payments",
+      "real-time payments",
+      "FPS",
+      "SEPA Instant",
+      "infrastructure",
+      "network",
+      "services",
+      "products",
+      "network",
+      "technology",
       "fintech",
       "finance",
-      "art",
     ],
     icons: [
       {
@@ -56,7 +42,7 @@ export default function manifest() {
       {
         name: "Home",
         url: routes.root,
-        description: "I'm a creative hobbyist who enjoys learning and building products.",
+        description: "GoodPay is Europe's public infrastructure for instant payments.",
         icons: [
           {
             src: "icon.png",
@@ -71,43 +57,9 @@ export default function manifest() {
         ],
       },
       {
-        name: "About",
-        url: routes.about,
-        description: "About.",
-        icons: [
-          {
-            src: "icon.png",
-            type: "image/png",
-            sizes: "1024x1024",
-          },
-          {
-            src: "icon2.png",
-            type: "image/png",
-            sizes: "128x128",
-          },
-        ],
-      },
-      {
-        name: "Projects",
-        url: routes.projects,
-        description: "Projects.",
-        icons: [
-          {
-            src: "icon.png",
-            type: "image/png",
-            sizes: "1024x1024",
-          },
-          {
-            src: "icon2.png",
-            type: "image/png",
-            sizes: "128x128",
-          },
-        ],
-      },
-      {
-        name: "Art",
-        url: routes.art,
-        description: "Art.",
+        name: "Docs",
+        url: routes.docs,
+        description: "Docs.",
         icons: [
           {
             src: "icon.png",
