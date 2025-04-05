@@ -20,8 +20,8 @@ export async function generateMetadata(): Promise<Metadata> {
         creator: "GoodPay",
         description: "GoodPay is Europe's public infrastructure for instant payments.",
         icons: {
-            icon: "/icon.png",
-            shortcut: "/icon.png",
+            icon: "/icon.webp",
+            shortcut: "/icon.webp",
         },
         keywords: [
             "instant payments",
@@ -56,14 +56,14 @@ export async function generateMetadata(): Promise<Metadata> {
             url: base_url + routes.root,
             locale: "en_US",
             siteName: "getgoodpay.com",
-            images: [{url: "/icon.png"}],
+            images: [{url: "/icon.webp"}],
         },
         twitter: {
             title: "GoodPay",
             description: "GoodPay is Europe's public infrastructure for instant payments.",
             card: "summary_large_image",
             site: "@getgoodpay",
-            images: ["/icon.png"],
+            images: ["/icon.webp"],
         },
         referrer: "no-referrer",
         robots: {

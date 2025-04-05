@@ -7,7 +7,7 @@ import APISection from "@/components/landing/api-section";
 import TeamSection from "@/components/landing/team-section";
 import ConnectingSection from "@/components/landing/connecting-section";
 import JoinSection from "@/components/landing/join-section";
-import QuoteSection from "@/components/landing/quote-section";
+// import QuoteSection from "@/components/landing/quote-section";
 export default function HomePage() {
   const handleScrollTo = (id: string) => {
     const element = document.getElementById(id);
@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <div className="flex h-full flex-col items-center justify-between">
       <HeroSection />
-      <QuoteSection />
+      {/*<QuoteSection />*/}
       <PropositionSection handleScrollTo={handleScrollTo} />
       <P2PSection />
       <C2BSection />

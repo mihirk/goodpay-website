@@ -32,8 +32,8 @@ export default function manifest() {
         sizes: "32x32",
       },
       {
-        src: "icon.png",
-        type: "image/png",
+        src: "icon.webp",
+        type: "image/webp",
         sizes: "any",
         purpose: "any",
       },
@@ -45,13 +45,13 @@ export default function manifest() {
         description: "GoodPay is Europe's public infrastructure for instant payments.",
         icons: [
           {
-            src: "icon.png",
-            type: "image/png",
+            src: "icon.webp",
+            type: "image/webp",
             sizes: "1024x1024",
           },
           {
-            src: "icon2.png",
-            type: "image/png",
+            src: "icon2.webp",
+            type: "image/webp",
             sizes: "128x128",
           },
         ],
@@ -62,8 +62,8 @@ export default function manifest() {
         description: "Docs.",
         icons: [
           {
-            src: "icon.png",
-            type: "image/png",
+            src: "icon.webp",
+            type: "image/webp",
             sizes: "1024x1024",
           },
           {
