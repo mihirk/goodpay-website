@@ -30,7 +30,7 @@ export default function PropositionSection({ handleScrollTo }: { handleScrollTo:
         {propositionItems.map((item, index) => (
           <div className="flex flex-col gap-4" key={index}>
             <div className="relative rounded-2xl overflow-hidden aspect-square">
-              <Image src={item.image} alt={item.title} fill className="object-cover object-left md:object-center" />
+              <Image src={item.image} sizes={"256"} alt={item.title} fill className="object-cover object-left md:object-center" />
             </div>
             <div className="text-right">
               <motion.div onClick={() => handleScrollTo(item.href.replace("#", ""))}>

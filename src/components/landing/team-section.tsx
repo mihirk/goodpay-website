@@ -26,6 +26,7 @@ export default function TeamSection() {
               alt="JPMorgan"
               width={256}
               height={256}
+              sizes={"256"}
               className="object-contain"
             />
           </div>

@@ -36,6 +36,11 @@ export async function generateMetadata(): Promise<Metadata> {
             "technology",
             "fintech",
             "finance",
+            "qr-code payments",
+            "qrcode payments",
+            "c2b payments",
+            "retail payments",
+            "p2p payments",
         ],
         alternates: {
             canonical: base_url + routes.root,
@@ -85,11 +90,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${notoSans.variable} antialiased`}>
-                <GoogleAnalytics gaId="G-Y61JZFVM4B"/>
-                <GoogleTagManager gtmId="G-Y61JZFVM4B"/>
-                <Navbar/>
-                <main className="h-full container mx-auto">{children}</main>
+        <body className={`${notoSans.variable} antialiased`}>
+        <GoogleAnalytics gaId="G-Y61JZFVM4B"/>
+        <GoogleTagManager gtmId="G-Y61JZFVM4B"/>
+        <Navbar/>
+        <main className="h-full container mx-auto">{children}</main>
         </body>
         </html>
     );

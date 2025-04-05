@@ -20,7 +20,7 @@ export default function QuoteSection() {
           </div>
         </div>
         <div className="hidden md:flex relative flex-col gap-4 rounded-2xl overflow-hidden aspect-square">
-          <Image src="/images/wise-quote-image.jpg" alt="Wise Section Image" fill className="object-cover" />
+          <Image sizes={'256'} src="/images/wise-quote-image.jpg" alt="Wise Section Image" fill className="object-cover" />
         </div>
       </div>
     </SectionContainer>
