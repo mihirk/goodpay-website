@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function QuoteSection() {
   return (
-    <SectionContainer>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-32 h-[450px]">
+    <SectionContainer id="quote">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
         <div className="flex flex-col justify-between">
           <div className="flex flex-col items-start gap-4">
             <Image src="/images/wise-logo-green-dark.png" alt="Wise Logo" width={100} height={100} />
@@ -19,7 +19,7 @@ export default function QuoteSection() {
             </p>
           </div>
         </div>
-        <div className="relative flex flex-col gap-4 rounded-2xl overflow-hidden">
+        <div className="hidden md:flex relative flex-col gap-4 rounded-2xl overflow-hidden aspect-square">
           <Image src="/images/wise-quote-image.jpg" alt="Wise Section Image" fill className="object-cover" />
         </div>
       </div>

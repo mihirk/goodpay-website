@@ -3,7 +3,7 @@ import Image from "next/image";
 import SectionContainer from "@/components/section-container";
 export default function TeamSection() {
   return (
-    <SectionContainer>
+    <SectionContainer id="team">
       <SectionHeader
         title="Built by a team of finance experts."
         description="We built financial products and security systems at some of the largest and most regulated financial companies, including Wise and JPMorgan Chase."

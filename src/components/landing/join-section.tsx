@@ -4,7 +4,7 @@ import SectionHeader from "../section-header";
 
 export default function JoinSection() {
   return (
-    <section className="container px-4 py-4 mx-auto h-screen flex flex-col justify-center items-center gap-8">
+    <section id="join" className="container px-4 py-4 mx-auto h-screen flex flex-col justify-center items-center gap-8">
       <div className="bg-[#121212] text-white rounded-2xl p-16 w-full h-full flex flex-col justify-center items-center gap-8">
         <SectionHeader
           title="Join a globally connected network of banks and fintechs."

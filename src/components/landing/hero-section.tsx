@@ -2,18 +2,18 @@ import CTAButton from "../cta-button";
 
 export default function HeroSection() {
   return (
-    <div className="container relative mx-auto">
-      <div className="grid grid-rows-[1fr_auto_auto] h-screen text-center">
-        <div className="row-start-1 place-self-center w-full sm:w-3/5">
+    <section className="h-screen px-4 md:px-16 xl:px-32 2xl:px-64" id="hero">
+      <div className="grid grid-rows-[1fr_auto_auto] h-screen items-center text-center">
+        <div className="row-start-1 place-self-center w-full">
           <div>
-            <h1 className="mb-8 text-7xl font-medium tracking-tight">
+            <h1 className="mb-8 text-5xl md:text-7xl font-medium tracking-tight">
               Eliminating the tax
               <br />
               on the world&apos;s economy
             </h1>
           </div>
 
-          <div className="mb-12 w-2/3 mx-auto text-lg text-muted-foreground">
+          <div className="mb-12 w-full md:w-2/3 mx-auto text-lg text-muted-foreground">
             <h2 className="text-xl">
               GoodPay is Europe&apos;s public infrastructure for instant payments. We connect individuals, businesses,
               banks, and fintechs, directly—cutting out intermediaries to grow the world&apos;s economy, not
@@ -51,6 +51,6 @@ export default function HeroSection() {
           </div>
         </div> */}
       </div>
-    </div>
+    </section>
   );
 }

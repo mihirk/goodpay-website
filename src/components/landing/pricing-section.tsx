@@ -14,9 +14,9 @@ const pricingItems = [
   },
 ];
 
-export default function APISection() {
+export default function PricingSection() {
   return (
-    <SectionContainer>
+    <SectionContainer id="pricing">
       <SectionHeader
         title="Transparent fixed-fee model."
         description="Unlike complex percentage-based fees, Goodpay believes in simplicity, and extreme transparency. We charge two simple fees — eliminating unpredictable costs and aligning incentives across the network."
