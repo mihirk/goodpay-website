@@ -29,8 +29,8 @@ export function Navbar() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
+    damping: 100,
+    restDelta: 100,
   });
 
   const handleScrollTo = (id: string) => {
@@ -49,7 +49,7 @@ export function Navbar() {
           <span className="font-semibold text-lg tracking-tighter">GoodPay</span>
         </Link>
 
-        <NavigationMenu>
+        <NavigationMenu delayDuration={0}>
           <NavigationMenuList className="gap-4">
             <NavigationMenuItem className="hidden md:block">
               <NavigationMenuTrigger className="font-normal">Products</NavigationMenuTrigger>
@@ -63,7 +63,9 @@ export function Navbar() {
                       >
                         <Image src="/images/goodpay_logo_256.png" alt="GoodPay" width={32} height={32} />
                         <div className="mb-2 mt-4 tracking-tighter text-xl font-semibold">GoodPay</div>
-                        <p className="text-sm leading-tight text-muted-foreground">The DNS for instant payments.</p>
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          Building payment methods on instant rails.
+                        </p>
                       </Link>
                     </NavigationMenuLink>
                   </li>
@@ -101,7 +103,7 @@ export function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink className="bg-primary text-primary-foreground" asChild>
-                <Link href="https://docs.getgoodpay.com/getting-started/">Get started</Link>
+                <Link href="https://docs.getgoodpay.com/guides/">Get started</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
