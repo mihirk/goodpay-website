@@ -1,6 +1,5 @@
 import Image from "next/image";
 import SectionHeader from "@/components/section-header";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import SectionContainer from "@/components/section-container";
 import CTAButton from "../cta-button";
