@@ -1,14 +1,11 @@
-import { routes } from "@/lib/routes";
-
 export default function robots() {
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://florian.ponoto.fr";
   return {
     rules: [
       {
         userAgent: "*",
-        allow: [routes.root],
+        allow: ["https://getgoodpay.com", "https://docs.getgoodpay.com"],
       },
     ],
-    sitemap: BASE_URL + "/sitemap.xml",
+    sitemap: "https://getgoodpay.com/sitemap.xml",
   };
 }

@@ -1,15 +1,13 @@
-import { routes } from "@/lib/routes";
-
 export default function manifest() {
   return {
     name: "GoodPay",
     short_name: "GoodPay",
-    start_url: routes.root,
-    id: routes.root,
+    start_url: "https://getgoodpay.com",
+    id: "https://getgoodpay.com",
     display: "standalone",
     orientation: "portrait",
     background_color: "#ffffff",
-    description: "GoodPay is Europe's public infrastructure for instant payments.",
+    description: "Launch payment experiences on instant payments rails.",
     theme_color: "#ffffff",
     category: [
       "instant payments",
@@ -41,8 +39,8 @@ export default function manifest() {
     shortcuts: [
       {
         name: "Home",
-        url: routes.root,
-        description: "GoodPay is Europe's public infrastructure for instant payments.",
+        url: "https://getgoodpay.com",
+        description: "Launch payment experiences on instant payments rails.",
         icons: [
           {
             src: "icon.webp",
@@ -58,7 +56,7 @@ export default function manifest() {
       },
       {
         name: "Docs",
-        url: routes.docs,
+        url: "https://docs.getgoodpay.com",
         description: "Docs.",
         icons: [
           {
