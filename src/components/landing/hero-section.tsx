@@ -13,8 +13,9 @@ export default function HeroSection() {
 
           <div className="mb-12 w-full md:w-2/3 mx-auto text-lg text-muted-foreground">
             <h2 className="text-xl">
-              GoodPay enables financial institutions to build P2P, in-person, and online payment experiences using
-              instant payments rails instead of international card networks–faster, cheaper, and more convenient.
+              GoodPay enables financial institutions to build peer-to-peer, in-person, and online payment experiences
+              using instant payments rails instead of international card networks. It&apos;s faster, cheaper, and more
+              convenient.
             </h2>
           </div>
 

@@ -103,7 +103,7 @@ export function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink className="bg-primary text-primary-foreground" asChild>
-                <Link href="https://docs.getgoodpay.com/guides/">Get started</Link>
+                <Link href="https://docs.getgoodpay.com/">Get started</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
