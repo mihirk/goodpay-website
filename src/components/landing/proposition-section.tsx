@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 const propositionItems = [
   {
     title: "Peer-to-peer",
-    description: "Make instant payments across institutions.",
+    description: "Domestic and cross-border P2P payments.",
     href: "#p2p",
     image: "/images/goodpay_cross_bank_p2p.png",
   },
   {
     title: "Consumer to business",
-    description: "Make in-person and online instant payments.",
+    description: "In-person and online payments.",
     href: "#c2b",
     image: "/images/goodpay_c2b.png",
   },
@@ -23,8 +23,8 @@ export default function PropositionSection({ handleScrollTo }: { handleScrollTo:
   return (
     <SectionContainer id="proposition">
       <SectionHeader
-        title="Launch tap-to-pay journeys on instant payment rails."
-        description="GoodPay helps financial companies of all sizes—from small fintechs to major banks—create mobile payment products that use instant payment rails (FPS in the UK or SEPA Instant in Europe), instead of traditional card networks."
+        title="Launch instant payment methods."
+        description="GoodPay enables financial institutions of any size to build instant payment solutions. For example, UK institutions can create Tap to Pay products on FPS, European institutions can unlock cross-border P2P payments with SEPA Instant, and specialized players can enable global 24/7 cross-currency transactions using stablecoins."
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 md:px-16 xl:px-32 2xl:px-64">
         {propositionItems.map((item, index) => (

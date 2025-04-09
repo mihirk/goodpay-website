@@ -7,14 +7,14 @@ export default function HeroSection() {
         <div className="row-start-1 place-self-center w-full">
           <div>
             <h1 className="mb-8 text-5xl md:text-7xl font-medium tracking-tight leading-[1.1] md:leading-[1.2]">
-              Launch convenient payment methods on instant rails.
+              Launch payment experiences on instant payments rails.
             </h1>
           </div>
 
           <div className="mb-12 w-full md:w-2/3 mx-auto text-lg text-muted-foreground">
             <h2 className="text-xl">
-              GoodPay enables financial institutions to build P2P, in-person, and online payment methods on mobile using
-              instant rails–faster, cheaper, and more convenient than cards.
+              GoodPay enables financial institutions to build P2P, in-person, and online payment experiences using
+              instant payments rails instead of international card networks–faster, cheaper, and more convenient.
             </h2>
           </div>
 
