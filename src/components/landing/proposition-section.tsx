@@ -24,7 +24,7 @@ export default function PropositionSection({ handleScrollTo }: { handleScrollTo:
     <SectionContainer id="proposition">
       <SectionHeader
         title="Launch instant payment methods."
-        description="GoodPay enables financial institutions of any size to build instant payment solutions. For example, UK institutions can create Tap to Pay products on FPS, European institutions can unlock cross-border P2P payments with SEPA Instant, and specialized players can enable global 24/7 cross-currency transactions using stablecoins."
+        description="GoodPay enables financial institutions to quickly build instant payment solutions, like Tap to Pay on FPS, interoperable P2P on SEPA Instant, or 24/7 global transactions with stablecoins."
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 md:px-16 xl:px-32 2xl:px-64">
         {propositionItems.map((item, index) => (

@@ -7,7 +7,7 @@ export default function C2BSection() {
     <SectionContainer id="c2b">
       <SectionHeader
         title="Instant, tap-to-go experience."
-        description="We give business customers the ability to accept in-person and online instant payments (C2B), just with a mobile–ensuring 35x cheaper transactions, and real-time access to funds for merchants."
+        description="We help businesses accept payments online and in-person via mobile–ensuring 35x cheaper transactions, and real-time access to funds."
       />
       <div className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[16/9]">
         <Image

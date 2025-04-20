@@ -7,7 +7,7 @@ export default function P2PSection() {
     <SectionContainer id="p2p">
       <SectionHeader
         title="Send and receive money."
-        description="We enable peer-to-peer (P2P) payments within, and across financial institutions. Think PayPal but free, fully interoperable, and embedded straight into your financial app."
+        description="We enable free, interoperable P2P payments between any financial institution in the GoodPay network—think PayPal or Venmo, but fully integrated into your app."
       />
       <div className="relative rounded-2xl overflow-hidden aspect-square md:aspect-video">
         <Image

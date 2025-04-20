@@ -7,7 +7,7 @@ export default function ConnectingSection() {
     <SectionContainer id="connecting">
       <SectionHeader
         title="Connecting the world of instant payments."
-        description="Enable your customers to move money faster, cheaper, and more conveniently—without relying on international card networks. We're building the infrastructure to make payments as easy as Apple Pay or Google Pay."
+        description="Join the GoodPay network–move money faster, cheaper, and more conveniently without relying on international card networks."
       />
 
       <div className="relative rounded-2xl overflow-hidden aspect-square max-h-[300px] md:aspect-video">

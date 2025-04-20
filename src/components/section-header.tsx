@@ -4,7 +4,7 @@ export default function SectionHeader({
   color = "light",
 }: {
   title: string;
-  description: string;
+  description: React.ReactNode;
   color?: "light" | "dark";
 }) {
   return (
