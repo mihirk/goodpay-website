@@ -1,54 +1,42 @@
-import Image from "next/image";
-import SectionHeader from "@/components/section-header";
-import SectionContainer from "@/components/section-container";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import { Globe } from "lucide-react";
+import { Repeat, Zap } from "lucide-react";
+import SectionTwoColumns, { SectionTwoColumnsItem } from "../section-two-columns";
 
-const propositionItems = [
+const data: SectionTwoColumnsItem[] = [
   {
-    title: "Peer-to-peer",
-    description: "Domestic and cross-border P2P payments.",
-    href: "#p2p",
-    image: "/images/goodpay_cross_bank_p2p.png",
+    icon: Repeat,
+    title: "Interoperable across institutions",
+    description:
+      "GoodPay is a network of banks & financial institutions that allows to send and receive instant payments across institutions, borders, and platforms.",
   },
   {
-    title: "Consumer to business",
-    description: "In-person and online payments.",
-    href: "#c2b",
-    image: "/images/goodpay_c2b.png",
+    icon: Zap,
+    title: "Compatible with existing infrastructure",
+    description:
+      "The GoodPay standard is  rail-agnostic, enabling members to unlock interoperable payments across FPS in the UK, SEPA Instant in Europe, or stablecoin networks.",
+  },
+  {
+    icon: Globe,
+    title: "Open governance",
+    description:
+      "GoodPay is designed to foster trust, collaboration, and scalable growth across the financial ecosystem. Members can shape its evolution—requesting features, proposing changes—with a long-term goal of becoming an ISO-recognized protocol.",
   },
 ];
 
-export default function PropositionSection({ handleScrollTo }: { handleScrollTo: (id: string) => void }) {
+export default function PropositionSection() {
   return (
-    <SectionContainer id="proposition">
-      <SectionHeader
-        title="Launch instant payment methods."
-        description="GoodPay enables financial institutions to quickly build instant payment solutions, like Tap to Pay on FPS, interoperable P2P on SEPA Instant, or 24/7 global transactions with stablecoins."
-      />
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 md:px-16 xl:px-32 2xl:px-64">
-        {propositionItems.map((item, index) => (
-          <div className="flex flex-col gap-4" key={index}>
-            <div className="relative rounded-2xl overflow-hidden aspect-square">
-              <Image
-                src={item.image}
-                sizes={"256"}
-                alt={item.title}
-                fill
-                className="object-cover object-left md:object-center"
-              />
-            </div>
-            <div className="text-right">
-              <motion.div onClick={() => handleScrollTo(item.href.replace("#", ""))}>
-                <Link href={item.href} className="text-base font-semibold">
-                  {item.title}
-                </Link>
-              </motion.div>
-              <h4 className="text-base text-muted-foreground">{item.description}</h4>
-            </div>
-          </div>
-        ))}
-      </div>
-    </SectionContainer>
+    <SectionTwoColumns
+      id="proposition"
+      title="Connecting the world of instant payments."
+      subtitle="For banks & financial institutions"
+      image={{
+        src: "/images/goodpay_cross_bank_p2p.png",
+        alt: "GoodPay cross-bank P2P",
+      }}
+      ctaText="Discover GoodPay"
+      ctaHref="https://docs.getgoodpay.com/"
+      reverse={false}
+      items={data}
+    />
   );
 }

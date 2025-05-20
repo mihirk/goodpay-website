@@ -7,7 +7,7 @@ export default function JoinSection() {
       <div className="bg-[#121212] text-white rounded-2xl p-16 w-full h-full flex flex-col justify-center items-center gap-8">
         <SectionHeader
           title="Join a globally connected network of financial institutions."
-          description="Working at a financial institution? Request access to the network with your work e-mail."
+          description="Request access to the network with your work e-mail."
           color="dark"
         />
         <div className="flex flex-col justify-center items-center gap-4 w-1/3">

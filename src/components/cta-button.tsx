@@ -15,7 +15,7 @@ export default function CTAButton({
   return (
     <div className="flex gap-4">
       <Link href={href} target="_blank">
-        <Button variant={variant} size={size} className="p-8 h-12 rounded-full text-sm">
+        <Button variant={variant} size={size} className="p-8 rounded-full text-sm">
           {text}
         </Button>
       </Link>

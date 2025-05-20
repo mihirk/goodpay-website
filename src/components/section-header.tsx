@@ -11,7 +11,7 @@ export default function SectionHeader({
     <div className="flex flex-col justify-center items-center w-full text-left md:text-center gap-4">
       <div className="w-full md:w-3/5">
         <h1
-          className={`text-left md:text-center text-2xl md:text-4xl font-medium ${
+          className={`text-left md:text-center text-2xl md:text-5xl font-semibold leading-normal ${
             color === "light" ? "text-primary" : "text-white"
           }`}
         >
